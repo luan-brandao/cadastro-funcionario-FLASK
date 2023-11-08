@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,300&family=Roboto+Slab:wght@900&display=swap"
+        rel="stylesheet">
+    <title>Cadastro de Funcionários</title>
+</head>
+
+<body>
+    <h1 class="cadastro">Cadastro de Funcionários</h1>
+    <div class="container">
+
+
+        <form method="POST" action="/add" class="lol">
+            <label for="primeiro_nome">
+                <h3>Primeiro Nome:</h3>
+            </label>
+            <input type="text" name="primeiro_nome" required><br>
+
+            <label for="sobrenome">
+                <h3>Sobrenome:</h3>
+            </label>
+            <input type="text" name="sobrenome" required><br>
+
+            <label for="data_admissao">
+                <h3>Data de Admissão:</h3>
+            </label>
+            <input type="date" name="data_admissao" required><br>
+
+            <label for="status_funcionario">
+                <h3>Status do Funcionário:</h3>
+            </label>
+            <select name="status_funcionario" required>
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select><br>
+
+            <label for="id_setor">
+                <h3>Setor:</h3>
+            </label>
+            <select name="id_setor" id="id_setor" required>
+                {% for setor in setores %}
+                <option value="{{ setor[0] }}">{{ setor[1] }}</option>
+                {% endfor %}
+            </select>
+
+
+            <label for="id_cargo">
+                <h3>Cargo:</h3>
+            </label>
+            <select name="id_cargo" id="id_cargo" required>
+                {% for cargo in cargos %}
+                <option value="{{ cargo[0] }}">{{ cargo[1] }}</option>
+                {% endfor %}
+            </select>
+
+
+            <button type="submit" class="adicionar">
+                <h3>Adicionar Funcionário</h3>
+            </button>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
