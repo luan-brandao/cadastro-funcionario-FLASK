@@ -18,9 +18,8 @@ Certifique-se de que o banco de dados MySQL `aula_13_10` está criado com as tab
 
 1. Clone o repositório:
 <br>
-
-   bash
    git clone https://github.com/luan-brandao/cadastro-funcionario-FLASK.git
+   <br>
    cd cadastro-funcionario-FLASK
 
    
